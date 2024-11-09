@@ -15,10 +15,13 @@ class BuahAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             BuahHolder {
         val binding =
-            ListItemBinding.inflate(LayoutInflater.from(parent.context), parent,
-                false)
+            ListItemBinding.inflate(
+                LayoutInflater.from(parent.context), parent,
+                false
+            )
         return BuahHolder(binding)
     }
+
     //set data ke recylerview
     override fun onBindViewHolder(holder: BuahHolder, position: Int) {
         //manggil dan set data
@@ -31,9 +34,11 @@ class BuahAdapter(
             context.startActivity(intent)
         }
     }
+
     //tampilkan data
     override fun getItemCount(): Int = dataBuah.size
+
     //deklarasi id pada customAdapter, id yang ada pada list_item
-    inner class BuahHolder(val binding: ListItemBinding):
+    inner class BuahHolder(val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 }

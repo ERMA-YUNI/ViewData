@@ -11,13 +11,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnViewList.setOnClickListener{
-            startActivity(Intent(applicationContext,
-                ListviewActivity::class.java))
+        binding.btnViewList.setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    ListviewActivity::class.java
+                )
+            )
         }
-        binding.btnRecylerView.setOnClickListener{
-            startActivity(Intent(applicationContext,
-                RecylerActivity::class.java))
+        binding.btnRecylerView.setOnClickListener {
+            startActivity(
+                Intent(
+                    applicationContext,
+                    RecylerActivity::class.java
+                )
+            )
         }
     }
 }
